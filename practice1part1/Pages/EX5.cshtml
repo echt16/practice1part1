@@ -1,0 +1,48 @@
+﻿@page
+@model practice1part1.Pages.EX5Model
+@{
+    ViewData["Title"] = "EX5";
+
+    List<List<string>> ex5 = new List<List<string>>()
+    {
+        new List<string>()
+        {
+            "author1",
+            "quote1"
+        },
+        new List<string>()
+        {
+            "author2",
+            "quote2"
+        },
+        new List<string>()
+        {
+            "author3",
+            "quote3"
+        },
+        new List<string>()
+        {
+            "author4",
+            "quote4"
+        },
+        new List<string>()
+        {
+            "author5",
+            "quote5"
+        },
+    };
+
+    Random rnd = new Random();
+    int index = rnd.Next(0, 5);
+
+    string author = ex5[index][0];
+    string quote = ex5[index][1];
+}
+
+<script name="Scripts">
+    let a = 5;
+</script>
+
+<h1>EX 5</h1>
+
+<h4>Author:@author; Quote:@quote</h4>
